@@ -1,0 +1,15 @@
+networks:
+  virtual:
+    driver: bridge
+
+services:
+  database:
+    image: mysql:debian
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password 
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
