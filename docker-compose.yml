@@ -10,6 +10,8 @@ services:
       MYSQL_ROOT_PASSWORD: password 
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - virtual
 
 volumes:
   db:
