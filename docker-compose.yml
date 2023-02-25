@@ -12,6 +12,30 @@ services:
       - db:/var/lib/mysql
     networks:
       - virtual
+  backend:
+    build: backend
+    ports:
+      - 8000:8000
+    command: python manage.py runserver 0.0.0.0:8000
+    working_dir: /src
+    volumes:
+      - ./backend:/src
+    depends_on: 
+      - database
+    networks:
+      - virtual
+  frontend:
+    command: sh -c "npm install && npm start"
+    build: 
+      context: frontend
+    ports:
+      - 3000:3000
+    networks:
+      - virtual
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    
 
 volumes:
   db:
