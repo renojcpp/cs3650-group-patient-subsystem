@@ -1,6 +1,6 @@
 [submodule "frontend"]
 	path = frontend
-	url = git@github.com:renojcpp/cs3560-patient-subsystem-front.git
+	url = https://github.com/renojcpp/cs3560-patient-subsystem-front.git
 [submodule "backend"]
 	path = backend
-	url = git@github.com:renojcpp/cs3560-patient-subsystem-back.git
+	url = https://github.com/renojcpp/cs3560-patient-subsystem-back.git
